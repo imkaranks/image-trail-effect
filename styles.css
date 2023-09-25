@@ -115,12 +115,15 @@ body {
   width: 200px;
   height: 250px;
   overflow: hidden;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
 }
 
 .img__wrapper > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  pointer-events: none;
 }
 
 /* variant 1 */
@@ -137,4 +140,18 @@ body {
 
 .img__wrapper.variant-5 {
   transform-origin: top;
+}
+
+select[name="variant"] {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  z-index: 9999;
+  background-color: #201e1d;
+  width: 100%;
+  max-width: 5rem;
+  border-radius: .25em;
+  padding: .75em;
+  border: none;
+  outline: none;
 }
